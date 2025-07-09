@@ -17,11 +17,11 @@ As part of the final course in the Google IT Support Professional certificate, I
 <p>In this first section of the lab I used OpenSSL to generate an asymmetric key pair from the command line. </p>
 <br>
 <p align="center">To start, I generated the private key by using the openssl utility with the genrsa command, which indicates that I want to create a new RSA key. Using the -out flag I told it the name of the file I'd like the key saved as, in this case private_key.pem, and the last parameter 2048 tells it how many bits I want the key to be.<br/>
-  <img src="https://github.com/user-attachments/assets/07a1af01-960e-40be-8553-bd802b46af29" height="80%" width="80%" alt="linux terminal with black background and white text. Top line reads openssl genrsa -out private_key.pem 2048. The next line reads generating RSA private key, 2048 bit long modulus (2 primes) and then there's a line break followed by the private key which is redacted by a red rectangle filled in which black and white text that reads private key here."/>
+  <img src="https://github.com/user-attachments/assets/07a1af01-960e-40be-8553-bd802b46af29" width="80%" alt="linux terminal with black background and white text. Top line reads openssl genrsa -out private_key.pem 2048. The next line reads generating RSA private key, 2048 bit long modulus (2 primes) and then there's a line break followed by the private key which is redacted by a red rectangle filled in which black and white text that reads private key here."/>
   <br />
   <br />
  Now that I had a private key, I used it to generate a corresponding public key. I did this by using the private_key.pem file as an input to the openssl utility. The command was openssl rsa -in private_key.pem -outform PEM -pubout -out public_key.pem<br />
-  <img src="https://github.com/user-attachments/assets/47a21f44-93f8-420a-b4d3-ab959f93d8c6" height="80%" width="80%" alt="linux terminal with black background and white text. The top line reads openssl rsa -in private_key.pem -outform PEM -pubout -out public_key.pem. The next line reads writing RSA key. Then there is a command cat public_key.pem followed by a block which starts with begin public key and ends with end public key and in the middle is the key value."/>
+  <img src="https://github.com/user-attachments/assets/47a21f44-93f8-420a-b4d3-ab959f93d8c6" width="80%" alt="linux terminal with black background and white text. The top line reads openssl rsa -in private_key.pem -outform PEM -pubout -out public_key.pem. The next line reads writing RSA key. Then there is a command cat public_key.pem followed by a block which starts with begin public key and ends with end public key and in the middle is the key value."/>
 </p>
 <br />
 <br />
